@@ -15,12 +15,9 @@ eureka:
 
 zuul:
   routes:
-      api-duo:
-        path: /duo/**
-        serviceId:  service-product-duo
-      api-foo:
-        path: /foo/**
-        serviceId:  service-product-foo
-ribbon:
-  eureka:
-    enabled: false
+      api-one:
+        path: /one/**
+        serviceId:  service-product
+      api-more:
+        path: /more/**
+        serviceId:  service-comsume

@@ -4,7 +4,7 @@ spring:
     loadbalancer:
       retry:
         enabled: true
-service-product-foo:
+service-product:
   ribbon:
     ConnectTimeout: 2000
     ReadTimeout: 10000
@@ -14,16 +14,7 @@ service-product-foo:
     PoolMaxThreads: 100
     MaxConnectionsPerHost: 100
     MaxTotalConnections: 200
-service-product-duo:
-  ribbon:
-    ConnectTimeout: 2000
-    ReadTimeout: 10000
-    OkToRetryOnAllOperations: true
-    MaxAutoRetriesNextServer: 1
-    MaxAutoRetries: 1
-    PoolMaxThreads: 100
-    MaxConnectionsPerHost: 100
-    MaxTotalConnections: 200
+
 #hystrix
 feign:
   hystrix:

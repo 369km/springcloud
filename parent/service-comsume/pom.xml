@@ -14,14 +14,8 @@
     <dependencies>
         <dependency>
             <groupId>com.foo.springcloud</groupId>
-            <artifactId>service-product-foo-feign</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.foo.springcloud</groupId>
-            <artifactId>service-product-duo-feign</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>service-product-feign</artifactId>
+            <version>${service.product.feign.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
