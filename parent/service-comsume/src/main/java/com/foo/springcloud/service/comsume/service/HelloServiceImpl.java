@@ -1,7 +1,7 @@
 package com.foo.springcloud.service.comsume.service;
 
 import com.foo.springcloud.service.product.duo.feign.DuoHelloFeign;
-import com.foo.springcloud.service.product.foo.feign.FooHelloFeign;
+import com.foo.springcloud.service.product.feign.FooHelloFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

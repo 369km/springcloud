@@ -6,9 +6,8 @@
     <modules>
         <module>eureka</module>
         <module>service-comsume</module>
+        <module>service-product</module>
         <module>zuul</module>
-        <module>service-product-foo</module>
-        <module>service-product-duo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
