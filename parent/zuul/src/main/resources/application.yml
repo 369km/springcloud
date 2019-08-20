@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 10007
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+
+zuul:
+  routes:
+      api-duo:
+        path: /duo/**
+        serviceId:  service-product-duo
+      api-foo:
+        path: /foo/**
+        serviceId:  service-product-foo
+ribbon:
+  eureka:
+    enabled: false
