@@ -25,5 +25,5 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000
+            timeoutInMilliseconds: 20000 #>ribbonTimeout = (ribbonReadTimeout + ribbonConnectTimeout) * (maxAutoRetries + 1) * (maxAutoRetriesNextServer + 1);
 

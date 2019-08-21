@@ -20,7 +20,8 @@
     <properties>
         <api.version>0.0.1-SNAPSHOT</api.version>
         <feign.version>0.0.1-SNAPSHOT</feign.version>
-        <web.version>0.0.1-SNAPSHOT</web.version>
+<!--        <web.version>0.0.1-SNAPSHOT</web.version>-->
+        <web.version>0.0.2-SNAPSHOT</web.version>
     </properties>
 
     <dependencies>

@@ -11,10 +11,12 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String hello() {
-        return build("service-comsume call ",fooHelloFeign.hello());
+        return build("service-comsume call ", fooHelloFeign.hello());
     }
 
     private String build(String arg1, String args2) {
-        return arg1 + args2;
+        String result = arg1 + args2;
+        System.out.println(result);
+        return result;
     }
 }

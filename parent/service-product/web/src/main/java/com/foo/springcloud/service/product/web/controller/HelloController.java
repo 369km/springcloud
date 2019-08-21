@@ -12,6 +12,7 @@ public class HelloController implements HelloApi {
     private String port;
     @Override
     public String hello() {
+        //模拟业务处理耗时,可能会出现Hystrix Readed time out
         long time=(long) (Math.random()*3000);
         try {
             Thread.sleep(time);
