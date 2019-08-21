@@ -1,13 +1,14 @@
-package com.foo.springcloud.config.client;
+package com.foo.springcloud.service.product.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+
 @EnableEurekaClient
 @SpringBootApplication
-public class Application {
+public class ServiceProductApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ServiceProductApplication.class, args);
     }
 }

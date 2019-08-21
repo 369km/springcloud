@@ -1,9 +1,11 @@
 spring:
   application:
-    name: service-product
+    name: turbine
+  main:
+    allow-bean-definition-overriding: true #turbine
 server:
-  port: 10003
-#  port: 10004
+  port: 10006
+
 eureka:
   client:
     service-url:
@@ -12,3 +14,10 @@ eureka:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
     hostname: ${spring.cloud.client.ip-address}
+turbine:
+  app-config: service-product , service-comsume
+  aggregator:
+    cluster-config: default
+  instanceUrlSuffix:
+    default: hystrix.stream
+  cluster-name-expression: new String("default")
