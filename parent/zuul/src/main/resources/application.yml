@@ -18,26 +18,10 @@ zuul:
     service-comsume:
       path: /service-comsume/**
       serviceId: service-comsume
-#  ignored-services: service-product
-
-#ribbon
-service-product:
-  ribbon:
-    ConnectTimeout: 1000
-    ReadTimeout: 110000
-    OkToRetryOnAllOperations: true
-    MaxAutoRetriesNextServer: 1
-    MaxAutoRetries: 1
-    PoolMaxThreads: 100
-    MaxConnectionsPerHost: 100
-    MaxTotalConnections: 200
-
-
-#hystrix
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 50000 #>ribbonTimeout = (ribbonReadTimeout + ribbonConnectTimeout) * (maxAutoRetries + 1) * (maxAutoRetriesNextServer + 1);
+  #http-timeout>ribbon-timeout
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 3000
