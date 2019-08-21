@@ -6,8 +6,8 @@ spring:
         enabled: true
 service-product:
   ribbon:
-    ConnectTimeout: 2000
-    ReadTimeout: 10000
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
     OkToRetryOnAllOperations: true
     MaxAutoRetriesNextServer: 1
     MaxAutoRetries: 1
@@ -25,5 +25,5 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 1000
 

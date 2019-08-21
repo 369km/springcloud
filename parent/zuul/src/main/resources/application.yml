@@ -15,9 +15,6 @@ eureka:
 
 zuul:
   routes:
-      api-one:
-        path: /one/**
-        serviceId:  service-product
-      api-more:
-        path: /more/**
+      api-comsume:
+        path: /api/**
         serviceId:  service-comsume
