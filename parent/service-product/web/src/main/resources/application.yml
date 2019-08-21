@@ -2,8 +2,8 @@ spring:
   application:
     name: service-product
 server:
-#  port: 10003
-  port: 10004
+  port: 10003
+#  port: 10004
 eureka:
   client:
     service-url:
