@@ -8,23 +8,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <version>0.0.1-SNAPSHOT</version>
-    <artifactId>service-product</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>api</module>
-        <module>web</module>
-        <module>feign</module>
-    </modules>
-
-    <properties>
-        <api.version>0.0.1-SNAPSHOT</api.version>
-        <feign.version>0.0.1-SNAPSHOT</feign.version>
-<!--        <web.version>0.0.1-SNAPSHOT</web.version>-->
-        <web.version>0.0.2-SNAPSHOT</web.version>
-    </properties>
+    <version>${config.version}</version>
+    <artifactId>config</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -34,9 +25,8 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.2</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

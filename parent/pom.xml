@@ -19,16 +19,20 @@
         <module>service-comsume</module>
         <module>service-product</module>
         <module>zuul</module>
+        <module>config</module>
+        <module>config-client</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
         <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
-<!--        <eureka.version>0.0.1-SNAPSHOT</eureka.version>-->
+        <eureka.version>0.0.1-SNAPSHOT</eureka.version>
         <eureka.version>0.0.2-SNAPSHOT</eureka.version>
-        <service.comsume.version>0.0.1-SNAPSHOT</service.comsume.version>
+<!--        <service.comsume.version>0.0.1-SNAPSHOT</service.comsume.version>-->
         <service.product.version>0.0.1-SNAPSHOT</service.product.version>
-        <zuul.version>0.0.1-SNAPSHOT</zuul.version>
         <service.product.feign.version>0.0.1-SNAPSHOT</service.product.feign.version>
+        <zuul.version>0.0.1-SNAPSHOT</zuul.version>
+        <config.version>0.0.1-SNAPSHOT</config.version>
+        <config.client.version>0.0.1-SNAPSHOT</config.client.version>
     </properties>
 
     <dependencies>

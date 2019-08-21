@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud #spring.appplication.name must be the same with git repo file,like spring-cloud-dev.yml
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      label: master
+      profile: dev
+      fail-fast: true
+server:
+  port: 10009
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
