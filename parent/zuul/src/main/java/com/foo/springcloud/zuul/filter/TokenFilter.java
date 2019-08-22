@@ -3,7 +3,6 @@ package com.foo.springcloud.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
@@ -29,12 +28,17 @@ public class TokenFilter extends ZuulFilter {
     @Override
     public Object run() {
         RequestContext context = RequestContext.getCurrentContext();
-        try {
-            Optional.ofNullable(context.getRequest().getParameter("token")).orElseThrow(() -> new RuntimeException("token not exist"));
-        } catch (Exception e) {
-            context.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            context.set("error.exception", e);
-        }
-        return null;
+        return Optional.ofNullable(context.getRequest().getParameter("token"))
+                .orElseGet(() -> {
+                    context.setSendZuulResponse(false);
+                    context.setResponseStatusCode(401);
+                    try {
+                        context.getResponse().getWriter().write("token is empty");
+                    } catch (Exception e) {
+                        context.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        context.set("error.exception", e);
+                    }
+                    return null;
+                });
     }
 }
