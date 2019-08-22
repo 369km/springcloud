@@ -1,3 +1,5 @@
+server:
+  port: 10009
 spring:
   application:
     name: spring-cloud #spring.appplication.name must be the same with git repo file,like spring-cloud-dev.yml
@@ -9,8 +11,17 @@ spring:
       label: master
       profile: dev
       fail-fast: true
-server:
-  port: 10009
+  rabbitmq:
+    host: 172.17.0.3
+    port: 5672
+    username: guest
+    password: guest
+# bus/refresh,test:http://localhost:10009/actuator/bus-refresh post
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 
 eureka:
   client:
