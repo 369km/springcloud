@@ -15,9 +15,10 @@
         <dependency>
             <groupId>com.foo.springcloud</groupId>
             <artifactId>provider-shenzhen-feign</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${provider.shenzhen.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!--        this 3 jar for hystrix dashboard-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
@@ -30,6 +31,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
+        <!--        this 3 jar for hystrix dashboard-->
     </dependencies>
 
     <build>

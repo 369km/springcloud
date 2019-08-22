@@ -8,9 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>0.0.1-SNAPSHOT</version>
     <artifactId>provider-chongqing</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>provider-chongqing-api</module>
         <module>provider-chongqing-feign</module>

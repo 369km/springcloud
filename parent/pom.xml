@@ -20,10 +20,10 @@
         <module>config</module>
         <module>config-client</module>
         <module>turbine</module>
-        <module>provider-shenzhen</module>
         <module>consumer-fudong</module>
-        <module>provider-chongqing</module>
         <module>consumer-fudi</module>
+        <module>provider-shenzhen</module>
+        <module>provider-chongqing</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -34,7 +34,9 @@
         <config.client.version>0.0.1-SNAPSHOT</config.client.version>
         <turbine.version>0.0.1-SNAPSHOT</turbine.version>
         <consumer.fudong.version>0.0.1-SNAPSHOT</consumer.fudong.version>
+        <consumer.fudi.version>0.0.1-SNAPSHOT</consumer.fudi.version>
         <provider.shenzhen.version>0.0.1-SNAPSHOT</provider.shenzhen.version>
+        <provider.chognqing.version>0.0.1-SNAPSHOT</provider.chognqing.version>
     </properties>
 
     <dependencies>
