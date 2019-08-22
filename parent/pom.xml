@@ -22,6 +22,8 @@
         <module>config</module>
         <module>config-client</module>
         <module>turbine</module>
+        <module>provider-shenzhen</module>
+        <module>consumer-fudong</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -35,6 +37,8 @@
         <config.version>0.0.1-SNAPSHOT</config.version>
         <config.client.version>0.0.1-SNAPSHOT</config.client.version>
         <turbine.version>0.0.1-SNAPSHOT</turbine.version>
+        <consumer.fudong.version>0.0.1-SNAPSHOT</consumer.fudong.version>
+        <provider.shenzhen.version>0.0.1-SNAPSHOT</provider.shenzhen.version>
     </properties>
 
     <dependencies>

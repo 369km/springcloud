@@ -1,0 +1,29 @@
+#ribbon
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+provider-shenzhen:
+  ribbon:
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 1
+    MaxAutoRetries: 1
+    PoolMaxThreads: 100
+    MaxConnectionsPerHost: 100
+    MaxTotalConnections: 200
+
+#hystrix
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000 #>ribbonTimeout = (ribbonReadTimeout + ribbonConnectTimeout) * (maxAutoRetries + 1) * (maxAutoRetriesNextServer + 1);
+
