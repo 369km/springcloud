@@ -1,11 +1,8 @@
 spring:
   application:
-    name: turbine
-  main:
-    allow-bean-definition-overriding: true #turbine
+    name: provider-chongqing
 server:
-  port: 10006
-
+  port: 10003
 eureka:
   client:
     service-url:
@@ -14,10 +11,3 @@ eureka:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
     hostname: ${spring.cloud.client.ip-address}
-turbine:
-  app-config: consumer-fudong , consumer-fudi
-  aggregator:
-    cluster-config: default
-  instanceUrlSuffix:
-    default: hystrix.stream
-  cluster-name-expression: new String("default")

@@ -1,6 +1,6 @@
-package com.foo.springcloud.consumer.fudong.service;
+package com.foo.springcloud.consumer.fudi.service;
 
-import com.foo.springcloud.provider.shenzhen.feign.CompanyFeign;
+import com.foo.springcloud.provider.chongqing.feign.CompanyFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +11,6 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public String company() {
-        return companyFeign.pingAn();
+        return companyFeign.yucun();
     }
 }
