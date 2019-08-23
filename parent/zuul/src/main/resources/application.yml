@@ -15,9 +15,12 @@ eureka:
 
 zuul:
   routes:
-    service-comsume:
-      path: /service-comsume/**
-      serviceId: service-comsume
+    fudong:
+      path: /fudong/**
+      serviceId: consumer-fudong
+    fudi:
+      path: /fudi/**
+      serviceId: consumer-fudi
   #http-timeout>ribbon-timeout
   host:
     connect-timeout-millis: 15000
