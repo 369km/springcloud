@@ -16,5 +16,6 @@
    ,输入：http://localhost:10006/turbine.stream
 2. zipkin查看地址：http://localhost:9411/ 
 3. eureka注册中心查看地址：http://localhost:10001/ 
-4. config-client通过消息总线更新的url：http://localhost:10009/actuator/bus-refresh，发post请求
+4. config-client通过消息总线更新的url：http://localhost:10009/actuator/bus-refresh
+   ，发post请求
 5. config查看配置文件：http://localhost:10008/springcloud/dev/master
