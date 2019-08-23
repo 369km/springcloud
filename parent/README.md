@@ -9,4 +9,4 @@
 |turbine|收集hystrix仪表盘信息后汇总显示，方便监控，收集consumer-*中调用信息|
 |zuul|整个项目的网关，防止非法访问；这里做了token校验|
 |config|配置中心，从外部仓库获取配置信息，做到动态跟新，配置了从git仓库获取方式|
-|config-client|配置文件客户端，测试从config配置中心获取配置信息，实际开发中会整合到具体项目|
+|config-client|配置文件客户端，测试从config配置中心获取配置信息，实际开发中会整合到具体项目,利用rabbitmq做了消息总线|
