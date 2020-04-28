@@ -22,3 +22,4 @@
 6. ribbon 负载均衡
 7. hystrix 崩溃熔断
 8. zuul 网关路由
+9. feign 服务提供端
