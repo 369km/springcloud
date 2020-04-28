@@ -12,10 +12,13 @@
 |config-client|配置文件客户端，测试从config配置中心获取配置信息，实际开发中会整合到具体项目,利用rabbitmq做了消息总线|
 
 ### 提示：
-1. turbine 查看地址：http://localhost:10006/hystrix 
+1. turbine 服务监控查看地址：http://localhost:10006/hystrix 
    ,输入：http://localhost:10006/turbine.stream
-2. zipkin查看地址：http://localhost:9411/ 
-3. eureka注册中心查看地址：http://localhost:10001/ 
-4. config-client通过消息总线更新的url：http://localhost:10009/actuator/bus-refresh
+2. zipkin 链路追踪查看地址：http://localhost:9411/ 
+3. eureka 注册中心查看地址：http://localhost:10001/ 
+4. config-client 通过消息总线更新的url：http://localhost:10009/actuator/bus-refresh
    ，发post请求
-5. config查看配置文件：http://localhost:10008/springcloud/dev/master
+5. config 查看配置文件：http://localhost:10008/springcloud/dev/master
+6. ribbon 负载均衡
+7. hystrix 崩溃熔断
+8. zuul 网关路由
